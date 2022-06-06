@@ -58,6 +58,10 @@ body {
   background-color: var(--primary-background-color);
   border-bottom: 1px solid #ececec;
 }
+.header-nav {
+  display: flex;
+  align-items: center;
+}
 .header-logo {
   font-family: "Raleway";
   font-weight: 700;
@@ -133,9 +137,8 @@ body {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  /* max-width: 700px; */
-  margin: 0 0 30px 0;
-  padding: 0 270px 0 270px;
+  max-width: 696px;
+  margin: 0 auto 30px auto;
 }
 .hero-button {
   color: var(--secondary-font-color);
@@ -172,32 +175,36 @@ body {
   letter-spacing: 0.03em;
   margin: 0;
 }
-.work-title {
+.flex-work {
+  display: flex;
+  justify-content: space-between;
+}
+.list-work {
+  width: 270px;
+}
+.list-work:last-child {
+  margin: 0;
+}
+.work .no-gap {
+  display: block;
+}
+/*-------------------- specification ------------------*/
+.specification {
+  padding: 0 0 94px 0;
+}
+
+.specification-title {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   margin: 0 0 50px 0;
 }
-.flex-work {
-  display: flex;
-}
-.list-work {
-  margin: 0 30px 94px 0;
-  width: 270px;
-}
-.list-work:last-child {
-  margin: 0;
-}
-
 .list-specification {
   margin: 0 30px 0 0;
 }
 .list-specification:last-child {
   margin: 0%;
-}
-.work .no-gap {
-  display: block;
 }
 
 /*-------------------- team ------------------*/
@@ -217,6 +224,11 @@ body {
 }
 .team-card {
   margin: 0 30px 0 0;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
+}
+.team-card:last-child {
+  margin: 0;
 }
 
 .team-employee {
@@ -239,6 +251,8 @@ body {
 }
 .team .no-gap {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 /*-------------------- footer ------------------*/
@@ -258,6 +272,9 @@ body {
 }
 .list-footer {
   margin: 0 0 9px 0;
+}
+.list-footer:last-child {
+  margin: 0;
 }
 
 .footer-adress {
@@ -316,7 +333,6 @@ body {
 .cards-items {
   width: calc((100% - 2 * 30px) / 3);
   margin: 0 30px 30px 0;
-  border-bottom: 1px solid #EEEEEE;
 }
 .cards-items:nth-child(3n) {
   margin-right: 0;
@@ -328,13 +344,19 @@ display: block;
   display: block;
 }
 
+.cards-items .card-box {
+padding: 20px 24px 20px 24px;
+border-right: 1px solid #EEEEEE;
+border-left: 1px solid #EEEEEE;
+border-bottom: 1px solid #EEEEEE;
+}
+
 .cards-desc {
   color: var(--primary-font-color);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   margin: 0 0 4px 0;
-  padding: 20px 24px 0 24px;
 }
 .cards-text {
   color: var(--additional-font-color);
@@ -342,5 +364,4 @@ display: block;
   line-height: 1.88;
   letter-spacing: 0.03em;
   margin: 0;
-  padding: 0 24px 20px 24px;
 }
